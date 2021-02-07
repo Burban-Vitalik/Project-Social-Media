@@ -1,0 +1,19 @@
+.item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.item a {
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;   
+}
+
+.item a:hover {
+    transform: scale(1.1);
+}
+
+.item a.activeLink {
+    color: white;
+}
