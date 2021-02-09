@@ -1,7 +1,7 @@
 import { Route } from 'react-router-dom';
 import styles from './App.module.scss';
 import Header from './component/Header/Header';
-import Messages from './component/Messages/Messages';
+import Dialogs from './component/Dialogs/Dialogs';
 import Navbar from './component/Navbar/Navbar';
 import { Profile } from './component/Profile/Profile';
 import Users from './component/Users/Users';
@@ -17,7 +17,7 @@ function App() {
         </aside>
         <div className={styles.appContent}>
           <Route path={'/profile'} component={Profile} />
-          <Route path={'/messages'} component={Messages} />
+          <Route path={'/messages'} component={Dialogs} />
           <Route path={'/users'} component={Users} />
       </div>
       </main>
