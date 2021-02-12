@@ -1,10 +1,11 @@
 import { Route } from 'react-router-dom';
 import styles from './App.module.scss';
 import Header from './component/Header/Header';
-import Dialogs from './component/Dialogs/Dialogs';
 import Navbar from './component/Navbar/Navbar';
 import { Profile } from './component/Profile/Profile';
 import Users from './component/Users/Users';
+import Dialogs from './component/Dialogs/Dialogs';
+import DialogsContainer from './component/Dialogs/DialogsContainer';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         </aside>
         <div className={styles.appContent}>
           <Route path={'/profile'} component={Profile} />
-          <Route path={'/messages'} component={Dialogs} />
+          <Route path={'/messages'} component={DialogsContainer} />
           <Route path={'/users'} component={Users} />
       </div>
       </main>
