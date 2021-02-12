@@ -10,7 +10,7 @@ const AddMessageForm = (props) => {
         <form onSubmit={props.handleSubmit}>
             <div className={styles.flex}>
                 <div>
-                    <Field component={'textarea'} placeholder={'Add post'} name={'newAddPost'} className={styles.textarea}/>
+                    <Field component={'textarea'} placeholder={'Write Message'} name={'newMessageBody'} className={styles.textarea}/>
                 </div>
                 <div>
                     <button className={styles.button}>Send</button>

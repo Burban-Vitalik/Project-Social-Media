@@ -5,8 +5,16 @@ import { DialogItem } from './Dialog/DialogItem';
 import { MessageItem } from './Message/MessageItem';
 
 const Dialogs = (props) => {
-    let dialogsArray = props.dialogs.map(element => <DialogItem id={element.id} name={element.name}/>);
-    let messagesArray = props.messages.map(element => <MessageItem id={element.id} message={element.message}/>);
+    let state = props.dialogsPage;
+    let dialogsArray = state.dialogs.map(element => <DialogItem id={element.id} name={element.name}/>);
+    let messagesArray = state.messages.map(element => <MessageItem id={element.id} message={element.message}/>);
+    let newMessageBody = state.newMessageBody
+
+    let addNewMessage = (values) => {
+        debugger;
+        // console.log();
+        props.sendMessage(values.newMessageBody)
+    }
     debugger;
     return(
         <div className={styles.dialogsPage}>
@@ -18,7 +26,7 @@ const Dialogs = (props) => {
                     {messagesArray}
                 </div>
             </div>
-            <AddMessageForm />
+            <AddMessageForm onSubmit={addNewMessage}/>
         </div>
     )
 }
