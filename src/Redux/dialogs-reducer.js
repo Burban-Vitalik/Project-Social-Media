@@ -21,6 +21,7 @@ const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
         case SEND_MESSAGE:
             let body = action.newMessageBody
+            localStorage.setItem('MessagesArray', [...state.messages, {id: 6, message: body}])
             return {
                 ...state,
                 messages: [...state.messages, {id:6, message: body}]
