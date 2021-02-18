@@ -6,6 +6,7 @@ import { Profile } from './component/Profile/Profile';
 import Users from './component/Users/Users';
 import Dialogs from './component/Dialogs/Dialogs';
 import DialogsContainer from './component/Dialogs/DialogsContainer';
+import AuthorizationPage from './component/Authorization/AuthorizationPage';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path={'/profile'} component={Profile} />
           <Route path={'/messages'} component={DialogsContainer} />
           <Route path={'/users'} component={Users} />
+          <Route path={'/authorization'} component={AuthorizationPage} />
       </div>
       </main>
     </div>
